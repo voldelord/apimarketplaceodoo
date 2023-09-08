@@ -11,6 +11,7 @@ import { ProductPricelistsModule } from './Modulo-de-productos/product_pricelist
 import { ProductTemplatesModule } from './Modulo-de-productos/product_templates/product_templates.module';
 import { ProductCategorysModule } from './Modulo-de-productos/product_categorys/product_categorys.module';
 import { ProductAtributesModule } from './Modulo-de-productos/product_atributes/product_atributes.module';
+import { ProductPricelistItemsModule } from './Modulo-de-productos/product_pricelist_items/product_pricelist_items.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { ProductAtributesModule } from './Modulo-de-productos/product_atributes/
     ProductTemplatesModule,
     ProductCategorysModule,
     ProductAtributesModule,
+    ProductPricelistItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
