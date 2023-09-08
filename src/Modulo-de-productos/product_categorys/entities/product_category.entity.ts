@@ -4,6 +4,9 @@ import {
   Column,
   ManyToOne,
   JoinColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  DeleteDateColumn,
 } from 'typeorm';
 
 @Entity('product_categories')
@@ -29,4 +32,20 @@ export class ProductCategory {
 
   @Column({ type: 'int', default: 0 })
   product_count: number;
+  @CreateDateColumn({
+    name: 'created_at',
+  })
+  createdAt: Date;
+
+  @UpdateDateColumn({
+    name: 'updated_at',
+    select: false,
+  })
+  updatedAt: Date;
+
+  @DeleteDateColumn({
+    name: 'deleted_at',
+    select: false,
+  })
+  deletedAt: Date;
 }
