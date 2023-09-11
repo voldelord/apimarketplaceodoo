@@ -15,6 +15,8 @@ import { ProductPricelistItemsModule } from './Modulo-de-productos/product_price
 import { ProductAttributesValuesModule } from './Modulo-de-productos/product_attributes_values/product_attributes_values.module';
 import { ProductStocksModule } from './Modulo-de-productos/product_stocks/product_stocks.module';
 import { ProductStocksMovesModule } from './Modulo-de-productos/product_stocks_moves/product_stocks_moves.module';
+import { ProductTemplatesAttributesValuesModule } from './Modulo-de-productos/product_templates_attributes_values/product_templates_attributes_values.module';
+import { ProductAttributesValuesPricesModule } from './Modulo-de-productos/product_attributes_values_prices/product_attributes_values_prices.module';
 
 @Module({
   imports: [
@@ -41,6 +43,8 @@ import { ProductStocksMovesModule } from './Modulo-de-productos/product_stocks_m
     ProductAttributesValuesModule,
     ProductStocksModule,
     ProductStocksMovesModule,
+    ProductTemplatesAttributesValuesModule,
+    ProductAttributesValuesPricesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

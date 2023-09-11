@@ -1,34 +1,35 @@
+import { ProductAttribute } from 'src/Modulo-de-productos/product_atributes/entities/product_atribute.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
+  ManyToOne,
+  JoinColumn,
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
 } from 'typeorm';
 
-@Entity('product_pricelists')
-export class ProductPricelist {
+@Entity('product_templates_attributes_values')
+export class ProductTemplateAttributeValue {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @ManyToOne(() => ProductAttribute, { nullable: false })
+  @JoinColumn({ name: 'attribute_id' })
+  attribute: ProductAttribute;
 
   @Column({ type: 'varchar', length: 255 })
   name: string;
 
-  @Column({ type: 'int' })
-  currency_id: number;
+  @Column({ type: 'varchar', length: 255 })
+  value: string;
 
   @Column({ type: 'int' })
-  version: number;
-
-  @Column({ type: 'tinyint' })
-  active: boolean;
+  position: number;
 
   @Column({ type: 'tinyint' })
   website_published: boolean;
-
-  @Column({ type: 'text', nullable: true })
-  item_ids: string;
 
   @CreateDateColumn({
     name: 'created_at',
