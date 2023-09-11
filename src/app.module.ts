@@ -12,6 +12,9 @@ import { ProductTemplatesModule } from './Modulo-de-productos/product_templates/
 import { ProductCategorysModule } from './Modulo-de-productos/product_categorys/product_categorys.module';
 import { ProductAtributesModule } from './Modulo-de-productos/product_atributes/product_atributes.module';
 import { ProductPricelistItemsModule } from './Modulo-de-productos/product_pricelist_items/product_pricelist_items.module';
+import { ProductAttributesValuesModule } from './Modulo-de-productos/product_attributes_values/product_attributes_values.module';
+import { ProductStocksModule } from './Modulo-de-productos/product_stocks/product_stocks.module';
+import { ProductStocksMovesModule } from './Modulo-de-productos/product_stocks_moves/product_stocks_moves.module';
 
 @Module({
   imports: [
@@ -35,6 +38,9 @@ import { ProductPricelistItemsModule } from './Modulo-de-productos/product_price
     ProductCategorysModule,
     ProductAtributesModule,
     ProductPricelistItemsModule,
+    ProductAttributesValuesModule,
+    ProductStocksModule,
+    ProductStocksMovesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
