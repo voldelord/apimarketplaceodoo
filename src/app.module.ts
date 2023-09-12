@@ -17,6 +17,11 @@ import { ProductStocksModule } from './Modulo-de-productos/product_stocks/produc
 import { ProductStocksMovesModule } from './Modulo-de-productos/product_stocks_moves/product_stocks_moves.module';
 import { ProductTemplatesAttributesValuesModule } from './Modulo-de-productos/product_templates_attributes_values/product_templates_attributes_values.module';
 import { ProductAttributesValuesPricesModule } from './Modulo-de-productos/product_attributes_values_prices/product_attributes_values_prices.module';
+import { SaleOrdersModule } from './Modulo-de-pedidos/sale_orders/sale_orders.module';
+import { SaleOrdersStatesModule } from './Modulo-de-pedidos/sale_orders_states/sale_orders_states.module';
+import { SaleOrdersLinesModule } from './Modulo-de-pedidos/sale_orders_lines/sale_orders_lines.module';
+import { SaleOrdersLinesTaxesModule } from './Modulo-de-pedidos/sale_orders_lines_taxes/sale_orders_lines_taxes.module';
+import { SaleOrdersTemplatesModule } from './Modulo-de-pedidos/sale_orders_templates/sale_orders_templates.module';
 
 @Module({
   imports: [
@@ -45,6 +50,11 @@ import { ProductAttributesValuesPricesModule } from './Modulo-de-productos/produ
     ProductStocksMovesModule,
     ProductTemplatesAttributesValuesModule,
     ProductAttributesValuesPricesModule,
+    SaleOrdersModule,
+    SaleOrdersStatesModule,
+    SaleOrdersLinesModule,
+    SaleOrdersLinesTaxesModule,
+    SaleOrdersTemplatesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
