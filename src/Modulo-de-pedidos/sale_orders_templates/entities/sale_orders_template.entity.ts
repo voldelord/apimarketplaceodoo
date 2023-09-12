@@ -6,6 +6,9 @@ import {
   Column,
   ManyToOne,
   JoinColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  DeleteDateColumn,
 } from 'typeorm';
 
 /*import { ResCurrency } from './res-currency.entity';
@@ -40,4 +43,21 @@ export class SaleOrderTemplate {
 
   @Column({ type: 'json', nullable: false })
   order_line_ids: any[];
+
+  @CreateDateColumn({
+    name: 'created_at',
+  })
+  createdAt: Date;
+
+  @UpdateDateColumn({
+    name: 'updated_at',
+    select: false,
+  })
+  updatedAt: Date;
+
+  @DeleteDateColumn({
+    name: 'deleted_at',
+    select: false,
+  })
+  deletedAt: Date;
 }

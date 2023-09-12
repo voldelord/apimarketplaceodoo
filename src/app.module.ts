@@ -22,6 +22,7 @@ import { SaleOrdersStatesModule } from './Modulo-de-pedidos/sale_orders_states/s
 import { SaleOrdersLinesModule } from './Modulo-de-pedidos/sale_orders_lines/sale_orders_lines.module';
 import { SaleOrdersLinesTaxesModule } from './Modulo-de-pedidos/sale_orders_lines_taxes/sale_orders_lines_taxes.module';
 import { SaleOrdersTemplatesModule } from './Modulo-de-pedidos/sale_orders_templates/sale_orders_templates.module';
+import { RatingRatingsModule } from './Modulo-de-valoraciones/rating_ratings/rating_ratings.module';
 
 @Module({
   imports: [
@@ -55,6 +56,7 @@ import { SaleOrdersTemplatesModule } from './Modulo-de-pedidos/sale_orders_templ
     SaleOrdersLinesModule,
     SaleOrdersLinesTaxesModule,
     SaleOrdersTemplatesModule,
+    RatingRatingsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
